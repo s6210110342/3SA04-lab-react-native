@@ -5,9 +5,9 @@ export default function Forecast(props) {
   return (
     <View>
       <Text>{props.main}</Text>
-      <text>{props.description}</text>
-      <text>{props.temp}</text>
-      <text>°C</text>
+      <Text>{props.description}</Text>
+      <Text>{props.temp}</Text>
+      <Text>°C</Text>
     </View>
   );
 }
