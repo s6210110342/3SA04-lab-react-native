@@ -1,21 +1,20 @@
 import React from "react";
-import { StyleSheet, useWindowDimensions } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import ZipCodeScreen from "./screen/ZipCodeScreen";
 import WeatherScreen from "./screen/WeatherScreen";
 
+const Stack = createStackNavigator();
+
 export default function App() {
-  const Stack = createStackNavigator()
-  const {width: windowWidth, height: windowHeight} = useWindowDimensions();
   return (
-    
-       <NavigationContainer>
+      <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={ZipCodeScreen}/>
-          <Stack.Screen name="Weather" component={WeatherScreen}/>
+          <Stack.Screen name="Home" component={ZipCodeScreen} />
+          <Stack.Screen name="Weather" component={WeatherScreen} />
         </Stack.Navigator>
-      </NavigationContainer>  
+      </NavigationContainer>
 
 
   );
@@ -28,8 +27,3 @@ const styles = StyleSheet.create({
     height: "100%",
   },
 });
-
-
-
-
-
