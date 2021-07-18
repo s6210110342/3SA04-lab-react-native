@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ZipCodeScreen from "../screen/ZipCodeScreen";
 import WeatherScreen from "../screen/WeatherScreen";
-import { StyleSheet, View, Image, Text } from "react-native";
+import { View, Image, Text } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
