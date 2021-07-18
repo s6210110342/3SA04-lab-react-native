@@ -45,7 +45,6 @@ export default function ZipCodeScreen(){
             keyExtractor = {item => item.code}
             renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
         />
-        {/* <StatusBar style="auto" /> */}
         </View>
     )
 }

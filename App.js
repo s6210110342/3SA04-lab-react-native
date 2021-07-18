@@ -81,19 +81,9 @@ export default function App() {
         headerTitle: () => <Text>Header</Text>,
         tabBarIcon: ({focused, color, size, padding}) => {
           let iconName;
-          if(route.name === 'Northern') {
+          if(route.name === 'Northern' || route.name === 'Northeastern' || route.name === 'Central' || route.name === 'Eastern' || route.name === 'Western' || route.name === 'Southern') {
             iconName = focused ? 'earth' : 'earth-outline'
-          } else if(route.name === 'Northeastern') {
-            iconName = focused ? 'earth' : 'earth-outline'
-          }else if(route.name === 'Central') {
-            iconName = focused ? 'earth' : 'earth-outline'
-          }else if(route.name === 'Eastern') {
-            iconName = focused ? 'earth' : 'earth-outline'
-          }else if(route.name === 'Western') {
-            iconName = focused ? 'earth' : 'earth-outline'
-          }else if(route.name === 'Southern') {
-            iconName = focused ? 'earth' : 'earth-outline'
-          }
+          } 
 
           return (
             <IonicIcon 
