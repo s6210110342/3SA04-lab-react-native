@@ -95,12 +95,6 @@ export default function App() {
           );
         },
       })}
-      tabBarOption={{
-        activeTintColor: '#23BBAD',
-        inactiveTintColor: "#748c94",
-        labelStyle: {fontSize: 16},
-        style: {width: fullScreenWidth}
-      }}
       >
         <Tab.Screen name="Northern" component={NorthernStackScreen} />
         <Tab.Screen name="Northeastern" component={NortheasternStackScreen} />

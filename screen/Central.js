@@ -46,7 +46,6 @@ export default function ZipCodeScreen(){
             keyExtractor = {item => item.code}
             renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
         />
-        {/* <StatusBar style="auto" /> */}
         </View>
     )
 }
@@ -57,7 +56,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginLeft: 30, 
-        marginRight: 30,         
+        marginRight: 30,
+        
     },
     zipPlace: {
         flex: 1,

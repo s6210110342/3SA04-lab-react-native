@@ -116,7 +116,7 @@
               if(route.name === 'Northern' || route.name === 'Northeastern' || route.name === 'Central' || route.name === 'Eastern' || route.name === 'Western' || route.name === 'Southern') {
               iconName = focused ? 'earth' : 'earth-outline'
               }
-              <!-- ส่วนนี้จะเป็น iconName ซึ่งจะเป็นการบอกว่าชื่อ Bottom Tab แต่ละ Tab นั้นให้มีรูป Icon เป็นยังไง ซึ่งในลูป จะบอกว่าให้ Focus ที่ earth ที่รูป earth-outline -->
+              <!-- ส่วนนี้จะเป็น iconName ซึ่งจะเป็นการบอกว่าชื่อ Bottom Tab แต่ละ Tab นั้นให้มีรูป Icon เป็นยังไง ซึ่งในลูป จะบอกว่าให้ถ้าก icon นั้น(Focus) จะเลือก icon แบบ earth ส่วนที่ไม่ได้ focus นั้น ให้ icon เป็นรูป earth-outline -->
 
               return (
                 <IonicIcon 
@@ -127,15 +127,43 @@
                 />
               );
             },
-          })}
-          tabBarOption={{
-            activeTintColor: '#23BBAD',
-            inactiveTintColor: "#748c94",
-            labelStyle: {fontSize: 16},
-            style: {width: fullScreenWidth}
-          }}> 
+          })}> 
           </NavigationContainer>
         ```
+
+
+# 2. Forecast.js
+
+* ในส่วนนี้จะเพิ่ม ให้รายละเอียดต่างๆ ระเอียดขึ้นกว่าเดิมโดยกำกับว่าข้อความนี้ที่ได้มานั้น คืออะไร
+
+  ```js
+  import React  from "react";
+  import { Text, View } from "react-native";
+
+  export default function Forecast(props) {
+    return (
+      <View style={{alignItems: "center"}}>
+        <Text style={{ fontSize: 20 }}>Province : {props.name}</Text>
+        <Text style={{ fontSize: 20 }}>Weather : {props.main}</Text>
+        <Text style={{ fontSize: 20 }}>Description : {props.description}</Text>
+        <Text style={{ fontSize: 20 }}>temp : {props.temp} °C</Text>
+      </View>
+    );
+  }
+  ```
+    * ได้จัดข้อความให้อยู่ตรงกลางโดยใช้ => `alignItems: "center"`
+
+    * ปรับขนาดข้อความ => `fontSize: 20`
+
+
+
+# ชื่อ - สกุล
+
+> นางสาว ศิขรินทร์ สามงามทอง
+
+> รหัศนักศึกษา : 6210110342;
+
+> Section : 01
 
           
       
